@@ -1,5 +1,5 @@
 #include "stdio.h"
-
+//by sky
 int main(){
     short i = 0x0102;//十六进制，高字节为1，底字节为2。 
     char t[2];//t[0]在内存底地址，t[1]在内存高地址。 
