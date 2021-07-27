@@ -23,7 +23,7 @@
 
 #endif
 
-#define portnumber 333
+#define portnumber 623
 int main (int argc,char * argv[])
 {
     int sockfd;
