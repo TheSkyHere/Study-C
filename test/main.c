@@ -30,12 +30,23 @@
 // }
 
 
+// int main()
+// {
+//     char   szValue[]  =   "0x1e";   
+//     int    nValude    =   0;       
+//     sscanf(szValue,"%x",&nValude);   
+//     printf("%d\n",nValude);
+//     printf("%d\n",(17%16));
+//     return 0; 
+// }
+
+
 int main()
-{
-    char   szValue[]  =   "0x1e";   
-    int    nValude    =   0;       
-    sscanf(szValue,"%x",&nValude);   
-    printf("%d\n",nValude);
-    printf("%d\n",(17%16));
-    return 0; 
+{    
+    char buf[100];
+    int len;
+    int len_1;
+    int x = 101;
+    x=30/9;
+    printf("%d\n",x);
 }

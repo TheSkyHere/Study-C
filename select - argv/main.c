@@ -1,11 +1,21 @@
 /* 2019.12.28  practice 
  *
  * int select(int nfds, fd_set *readfds,fd_set *writefds,fd_set *exceptdes,struct timeval *timeout); //monitoring multiple descriptions FD
+ * readfds：监视文件描述符的一个集合，我们监视其中的文件描述符是不是可读，或者更准确的说，读取是不是不阻塞了。
+ * writefds：监视文件描述符的一个集合，我们监视其中的文件描述符是不是可写，或者更准确的说，写入是不是不阻塞了。
+ * exceptfds：用来监视发生错误异常文件
+ * timeout:timeout表示select返回之前的时间上限。如果timeout==NULL，无期限等待下去，这个等待可以被一个信号中断，只有当一个描述符准备好，或者捕获到一个信号时函数才会返回。如果是捕获到信号，select返回-1，并将变量errno设置成EINTR。
+ * struct timeval{
+ *     long tv_sec;//秒
+ *     long tv_usec;//微秒
+ * }
+ * 
+ * 
  * void FD_CLR(int fd,fd_set * set);     //clear FD
  * int  FD_ISSET(int fd, fd_set *set);	 //test FD on aggregate														
  * void FD_SET(int fd, fd_set *set);	 //add FD to aggregate
  * void FD_ZERO(fd_set *set);			 //init aggregate
-
+ * 
 #include <sys/select.h> /* 根据POSIX.1 - 2001 */
 /*根据早期的标准*/
 #include<sys/types.h>
@@ -91,6 +101,7 @@ int main(int argc, char **argv)
 	FD_SET(fd3,&fdset);              /*设置stdout，使集合中包含stdout*/  
 	FD_SET(fd4,&fdset);              /*设置stdout，使集合中包含stdout*/  
 
+	printf("fd1=%d,fd2=%d,fd3=%d,fd4=%d\n",fd1,fd2,fd3,fd4);
 	MAXfd=fd1;
 	if(MAXfd<fd2)
 	{

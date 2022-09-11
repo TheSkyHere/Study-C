@@ -1,0 +1,11 @@
+打开core dump ：ulimit -c unlimited
+关闭core dump ：ulimit -c 0
+
+//ubuntu下使用
+sudo service apport stop
+https://blog.csdn.net/blocker7/article/details/123250209
+
+使用流程
+gcc -g ./main.c  -o test 
+./test 
+gdb ./test ./core  

@@ -2,7 +2,8 @@
 #define __API_h 
 
 
-void test();
+void test(int vol);
+void test_1(int vol);
 
 
 #endif

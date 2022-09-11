@@ -1,0 +1,4 @@
+https://blog.csdn.net/m0_50682747/article/details/108490066
+
+可以看到，在system替换子进程，执行完毕代码后跳回执行printf(“This is child end\n”);
+而使用excel替换子进程，执行完代码后并不跳回执行，而是直接完成。

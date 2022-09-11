@@ -24,7 +24,8 @@ int main(int argc, char **argv)
     system("ls -all ");
 
     printf("fd1 = %d\n",fd);  
-    // fd = open("file-1", O_RDWR | O_CREAT | O_NONBLOCK,,(S_IRUSR|S_IWUSR|S_IRGRP|S_IROTH));  //WR|if no file creat|NO block 非阻塞方式运行
+    // fd = open("file-1", O_RDWR | O_CREAT | O_NONBLOCK,,(S_IRUSR|S_IWUSR|S_IRGRP|S_IROTH));  
+    //WR|if no file creat|NO block 非阻塞方式运行 （O_NONBLOCK：只用于设备文件，而不用于普通文件）
     if (fd < 0)  
     {  
         printf("can't open! fd\n");  
@@ -32,7 +33,7 @@ int main(int argc, char **argv)
     }
     // fd1 = open("file-1", O_RDWR | O_CREAT,(S_IRUSR|S_IWUSR|S_IRGRP|S_IROTH));  //WR|if no file and creat   note: fd is int
     // printf("fd1 = %d\n",fd1);  
-    fd1 = open("/dev/ttyUSB0", O_RDWR);  //阻塞方式运行  need root
+    fd1 = open("/dev/ttyUSB0", O_RDWR);  //阻塞方式运行  need root  (仅仅针对)
     printf("fd1 = %d\n",fd1);  
     if (fd1 < 0)  
     {  
