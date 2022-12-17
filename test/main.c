@@ -28,14 +28,13 @@
 //     printf("n=%d\n",n);
 //     return 0;
 // }
-
+#define BF_PORT_LED_NUM_AT_BYTE  4
 
 int main()
 {
-    char   szValue[]  =   "0x1e";   
-    int    nValude    =   0;       
-    sscanf(szValue,"%x",&nValude);   
-    printf("%d\n",nValude);
-    printf("%d\n",(17%16));
+    int i ;
+    for(i = 0;i<BF_PORT_LED_NUM_AT_BYTE;i++){
+        printf("\n");
+    }
     return 0; 
 }

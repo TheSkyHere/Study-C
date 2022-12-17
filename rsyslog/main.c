@@ -5,11 +5,11 @@
 int main()
 {
  
-    openlog("msg-lyh", LOG_PID, LOG_LOCAL0);
+    // openlog("msg-lyh", LOG_PID, LOG_LOCAL0);
     syslog(LOG_INFO, "this is a test");
  
  
-    closelog();
+    // closelog();
  
     return 0;
 

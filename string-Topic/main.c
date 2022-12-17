@@ -70,6 +70,8 @@
 // 返回值：如果找到指定的字符则返回该字符所在的地址，否则返回0。
 
 // itoa()/sprintf  这个其实是C/C++非标准库中的函数，而是Windows平台下扩展的，标准库中有sprintf（注意是标准库），功能比这个强的多的啦，用法跟printf有点神似：
+// vsprintf
+// fprintf
 // atoi()
 // memset()
 // memcopy()

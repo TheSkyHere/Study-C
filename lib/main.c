@@ -23,6 +23,12 @@
 // }
 
 
+
+void matao(){
+    printf("this is matao\n");
+}
+
+
 //调用动态库
 //编译指令：gcc main.c  -o test-1  -ldl 
 int main()

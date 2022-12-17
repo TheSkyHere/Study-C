@@ -7,4 +7,5 @@
 void test()
 {
     printf("matao-test api\n");
+    matao();
 }
