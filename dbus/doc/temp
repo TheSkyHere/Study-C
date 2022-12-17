@@ -1,0 +1,1468 @@
+    busctl set-property xyz.openbmc_project.Software.BMC.Updater /xyz/openbmc_project/software/$Image_ID xyz.openbmc_project.Software.Activation RequestedActivation s xyz.openbmc_project.Software.Activation.RequestedActivations.Active
+    busctl get-property xyz.openbmc_project.Software.BMC.Updater /xyz/openbmc_project/software/$Image_ID xyz.openbmc_project.Software.Activation Activation
+
+    busctl get-property xyz.openbmc_project.Settings /xyz/openbmc_project/software/apply_time xyz.openbmc_project.Software.ApplyTime RequestedApplyTime 
+    busctl set-property xyz.openbmc_project.Settings /xyz/openbmc_project/software/apply_time xyz.openbmc_project.Software.ApplyTime RequestedApplyTime s xyz.openbmc_project.Software.ApplyTime.RequestedApplyTimes.OnReset  
+    busctl set-property xyz.openbmc_project.Settings /xyz/openbmc_project/software/apply_time xyz.openbmc_project.Software.ApplyTime RequestedApplyTime s xyz.openbmc_project.Software.ApplyTime.RequestedApplyTimes.Immediate  
+
+
+
+
+    密码：
+    busctl introspect xyz.openbmc_project.User.Manager /xyz/openbmc_project/user
+    busctl set-property xyz.openbmc_project.User.Manager /xyz/openbmc_project/user org.freedesktop.DBus.ObjectManager os GetManagedObjects
+
+
+
+     busctl call xyz.openbmc_project.EntityManager / org.freedesktop.DBus.ObjectManager  GetManagedObjects
+a{oa{sa{sv}}} 8 "/xyz/openbmc_project/inventory/system/board/kestrel" 5 "org.freedesktop.DBus.Peer" 0 "org.freedesktop.DBus.Introspectable" 0 "org.freedesktop.DBus.Properties" 0 "xyz.openbmc_project.Inventory.Item.Board" 3 "Name" s "kestrel" "Probe" s "TRUE" "Type" s "Board" "xyz.openbmc_project.AddObject" 0 
+"/xyz/openbmc_project/inventory/system/board/kestrel/Host3_Fcb_1" 8 "org.freedesktop.DBus.Peer" 0 "org.freedesktop.DBus.Introspectable" 0 "org.freedesktop.DBus.Properties" 0 "xyz.openbmc_project.Configuration.TMP75.Thresholds3" 4 "Direction" s "less than" "Name" s "lower critical" "Severity" d 1 "Value" d 0 "xyz.openbmc_project.Configuration.TMP75.Thresholds2" 4 "Direction" s "less than" "Name" s "lower non critical" "Severity" d 0 "Value" d 5 "xyz.openbmc_project.Configuration.TMP75.Thresholds1" 4 "Direction" s "greater than" "Name" s "upper non critical" "Severity" d 0 "Value" d 38 "xyz.openbmc_project.Configuration.TMP75.Thresholds0" 4 "Direction" s "greater than" "Name" s "upper critical" "Severity" d 1 "Value" d 40 "xyz.openbmc_project.Configuration.TMP75" 4 "Address" t 72 "Bus" t 39 "Name" s "Host3_Fcb_1" "Type" s "TMP75" 
+"/xyz/openbmc_project/inventory/system/board/kestrel/BMC_eeprom0" 4 "org.freedesktop.DBus.Peer" 0 "org.freedesktop.DBus.Introspectable" 0 "org.freedesktop.DBus.Properties" 0 "xyz.openbmc_project.Configuration.EEPROM_24C64" 4 "Address" t 80 "Bus" t 8 "Name" s "BMC_eeprom0" "Type" s "EEPROM_24C64" 
+"/xyz/openbmc_project/inventory/system/board/kestrel/BMC_LM75_1" 8 "org.freedesktop.DBus.Peer" 0 "org.freedesktop.DBus.Introspectable" 0 "org.freedesktop.DBus.Properties" 0 "xyz.openbmc_project.Configuration.TMP75.Thresholds3" 4 "Direction" s "less than" "Name" s "lower critical" "Severity" d 1 "Value" d 0 "xyz.openbmc_project.Configuration.TMP75.Thresholds2" 4 "Direction" s "less than" "Name" s "lower non critical" "Severity" d 0 "Value" d 5 "xyz.openbmc_project.Configuration.TMP75.Thresholds1" 4 "Direction" s "greater than" "Name" s "upper non critical" "Severity" d 0 "Value" d 38 "xyz.openbmc_project.Configuration.TMP75.Thresholds0" 4 "Direction" s "greater than" "Name" s "upper critical" "Severity" d 1 "Value" d 40 "xyz.openbmc_project.Configuration.TMP75" 4 "Address" t 74 "Bus" t 8 "Name" s "BMC_LM75_1" "Type" s "TMP75" 
+"/xyz/openbmc_project/inventory/system/board/kestrel/Host1_Base_1" 8 "org.freedesktop.DBus.Peer" 0 "org.freedesktop.DBus.Introspectable" 0 "org.freedesktop.DBus.Properties" 0 "xyz.openbmc_project.Configuration.TMP75.Thresholds3" 4 "Direction" s "less than" "Name" s "lower critical" "Severity" d 1 "Value" d 0 "xyz.openbmc_project.Configuration.TMP75.Thresholds2" 4 "Direction" s "less than" "Name" s "lower non critical" "Severity" d 0 "Value" d 5 "xyz.openbmc_project.Configuration.TMP75.Thresholds1" 4 "Direction" s "greater than" "Name" s "upper non critical" "Severity" d 0 "Value" d 38 "xyz.openbmc_project.Configuration.TMP75.Thresholds0" 4 "Direction" s "greater than" "Name" s "upper critical" "Severity" d 1 "Value" d 40 "xyz.openbmc_project.Configuration.TMP75" 4 "Address" t 78 "Bus" t 40 "Name" s "Host1_Base_1" "Type" s "TMP75" 
+"/xyz/openbmc_project/inventory/system/board/kestrel/Host2_Base_2" 8 "org.freedesktop.DBus.Peer" 0 "org.freedesktop.DBus.Introspectable" 0 "org.freedesktop.DBus.Properties" 0 "xyz.openbmc_project.Configuration.TMP75.Thresholds3" 4 "Direction" s "less than" "Name" s "lower critical" "Severity" d 1 "Value" d 0 "xyz.openbmc_project.Configuration.TMP75.Thresholds2" 4 "Direction" s "less than" "Name" s "lower non critical" "Severity" d 0 "Value" d 5 "xyz.openbmc_project.Configuration.TMP75.Thresholds1" 4 "Direction" s "greater than" "Name" s "upper non critical" "Severity" d 0 "Value" d 38 "xyz.openbmc_project.Configuration.TMP75.Thresholds0" 4 "Direction" s "greater than" "Name" s "upper critical" "Severity" d 1 "Value" d 40 "xyz.openbmc_project.Configuration.TMP75" 4 "Address" t 79 "Bus" t 40 "Name" s "Host2_Base_2" "Type" s "TMP75" 
+"/xyz/openbmc_project/inventory/system/board/kestrel/Host4_Fcb_2" 8 "org.freedesktop.DBus.Peer" 0 "org.freedesktop.DBus.Introspectable" 0 "org.freedesktop.DBus.Properties" 0 "xyz.openbmc_project.Configuration.TMP75.Thresholds3" 4 "Direction" s "less than" "Name" s "lower critical" "Severity" d 1 "Value" d 0 "xyz.openbmc_project.Configuration.TMP75.Thresholds2" 4 "Direction" s "less than" "Name" s "lower non critical" "Severity" d 0 "Value" d 5 "xyz.openbmc_project.Configuration.TMP75.Thresholds1" 4 "Direction" s "greater than" "Name" s "upper non critical" "Severity" d 0 "Value" d 38 "xyz.openbmc_project.Configuration.TMP75.Thresholds0" 4 "Direction" s "greater than" "Name" s "upper critical" "Severity" d 1 "Value" d 40 "xyz.openbmc_project.Configuration.TMP75" 4 "Address" t 73 "Bus" t 39 "Name" s "Host4_Fcb_2" "Type" s "TMP75" 
+"/xyz/openbmc_project/EntityManager" 4 "org.freedesktop.DBus.Peer" 0 "org.freedesktop.DBus.Introspectable" 0 "org.freedesktop.DBus.Properties" 0 "xyz.openbmc_project.EntityManager" 0
+
+root@kestrel:~# busctl call xyz.openbmc_project.EntityManager / org.freedesktop.DBus.ObjectManager  GetManagedObjects
+a{oa{sa{sv}}} 8 "/xyz/openbmc_project/inventory/system/board/kestrel" 5 "org.freedesktop.DBus.Peer" 0 "org.freedesktop.DBus.Introspectable" 0 "org.freedesktop.DBus.Properties" 0 "xyz.openbmc_project.Inventory.Item.Board" 3 "Name" s "kestrel" "Probe" s "TRUE" "Type" s "Board" "xyz.openbmc_project.AddObject" 0 
+"/xyz/openbmc_project/inventory/system/board/kestrel/Host1_Base_1" 8 "org.freedesktop.DBus.Peer" 0 "org.freedesktop.DBus.Introspectable" 0 "org.freedesktop.DBus.Properties" 0 "xyz.openbmc_project.Configuration.TMP75.Thresholds3" 4 "Direction" s "less than" "Name" s "lower critical" "Severity" d 1 "Value" d 0 "xyz.openbmc_project.Configuration.TMP75.Thresholds2" 4 "Direction" s "less than" "Name" s "lower non critical" "Severity" d 0 "Value" d 5 "xyz.openbmc_project.Configuration.TMP75.Thresholds1" 4 "Direction" s "greater than" "Name" s "upper non critical" "Severity" d 0 "Value" d 38 "xyz.openbmc_project.Configuration.TMP75.Thresholds0" 4 "Direction" s "greater than" "Name" s "upper critical" "Severity" d 1 "Value" d 40 "xyz.openbmc_project.Configuration.TMP75" 4 "Address" t 78 "Bus" t 40 "Name" s "Host1_Base_1" "Type" s "TMP75" 
+"/xyz/openbmc_project/EntityManager" 4 "org.freedesktop.DBus.Peer" 0 "org.freedesktop.DBus.Introspectable" 0 "org.freedesktop.DBus.Properties" 0 "xyz.openbmc_project.EntityManager" 0 
+"/xyz/openbmc_project/inventory/system/board/kestrel/BMC_eeprom0" 4 "org.freedesktop.DBus.Peer" 0 "org.freedesktop.DBus.Introspectable" 0 "org.freedesktop.DBus.Properties" 0 "xyz.openbmc_project.Configuration.EEPROM_24C64" 4 "Address" t 80 "Bus" t 8 "Name" s "BMC_eeprom0" "Type" s "EEPROM_24C64" 
+"/xyz/openbmc_project/inventory/system/board/kestrel/Host4_Fcb_2" 8 "org.freedesktop.DBus.Peer" 0 "org.freedesktop.DBus.Introspectable" 0 "org.freedesktop.DBus.Properties" 0 "xyz.openbmc_project.Configuration.TMP75.Thresholds3" 4 "Direction" s "less than" "Name" s "lower critical" "Severity" d 1 "Value" d 0 "xyz.openbmc_project.Configuration.TMP75.Thresholds2" 4 "Direction" s "less than" "Name" s "lower non critical" "Severity" d 0 "Value" d 5 "xyz.openbmc_project.Configuration.TMP75.Thresholds1" 4 "Direction" s "greater than" "Name" s "upper non critical" "Severity" d 0 "Value" d 38 "xyz.openbmc_project.Configuration.TMP75.Thresholds0" 4 "Direction" s "greater than" "Name" s "upper critical" "Severity" d 1 "Value" d 40 "xyz.openbmc_project.Configuration.TMP75" 4 "Address" t 73 "Bus" t 39 "Name" s "Host4_Fcb_2" "Type" s "TMP75" "/xyz/openbmc_project/inventory/system/board/kestrel/Host3_Fcb_1" 8 "org.freedesktop.DBus.Peer" 0 "org.freedesktop.DBus.Introspectable" 0 "org.freedesktop.DBus.Properties" 0 "xyz.openbmc_project.Configuration.TMP75.Thresholds3" 4 "Direction" s "less than" "Name" s "lower critical" "Severity" d 1 "Value" d 0 "xyz.openbmc_project.Configuration.TMP75.Thresholds2" 4 "Direction" s "less than" "Name" s "lower non critical" "Severity" d 0 "Value" d 5 "xyz.openbmc_project.Configuration.TMP75.Thresholds1" 4 "Direction" s "greater than" "Name" s "upper non critical" "Severity" d 0 "Value" d 38 "xyz.openbmc_project.Configuration.TMP75.Thresholds0" 4 "Direction" s "greater than" "Name" s "upper critical" "Severity" d 1 "Value" d 40 "xyz.openbmc_project.Configuration.TMP75" 4 "Address" t 72 "Bus" t 39 "Name" s "Host3_Fcb_1" "Type" s "TMP75" "/xyz/openbmc_project/inventory/system/board/kestrel/BMC_LM75_1" 8 "org.freedesktop.DBus.Peer" 0 "org.freedesktop.DBus.Introspectable" 0 "org.freedesktop.DBus.Properties" 0 "xyz.openbmc_project.Configuration.TMP75.Thresholds3" 4 "Direction" s "less than" "Name" s "lower critical" "Severity" d 1 "Value" d 0 "xyz.openbmc_project.Configuration.TMP75.Thresholds2" 4 "Direction" s "less than" "Name" s "lower non critical" "Severity" d 0 "Value" d 5 "xyz.openbmc_project.Configuration.TMP75.Thresholds1" 4 "Direction" s "greater than" "Name" s "upper non critical" "Severity" d 0 "Value" d 38 "xyz.openbmc_project.Configuration.TMP75.Thresholds0" 4 "Direction" s "greater than" "Name" s "upper critical" "Severity" d 1 "Value" d 40 "xyz.openbmc_project.Configuration.TMP75" 4 "Address" t 74 "Bus" t 8 "Name" s "BMC_LM75_1" "Type" s "TMP75" "/xyz/openbmc_project/inventory/system/board/kestrel/Host2_Base_2" 8 "org.freedesktop.DBus.Peer" 0 "org.freedesktop.DBus.Introspectable" 0 "org.freedesktop.DBus.Properties" 0 "xyz.openbmc_project.Configuration.TMP75.Thresholds3" 4 "Direction" s "less than" "Name" s "lower critical" "Severity" d 1 "Value" d 0 "xyz.openbmc_project.Configuration.TMP75.Thresholds2" 4 "Direction" s "less than" "Name" s "lower non critical" "Severity" d 0 "Value" d 5 "xyz.openbmc_project.Configuration.TMP75.Thresholds1" 4 "Direction" s "greater than" "Name" s "upper non critical" "Severity" d 0 "Value" d 38 "xyz.openbmc_project.Configuration.TMP75.Thresholds0" 4 "Direction" s "greater than" "Name" s "upper critical" "Severity" d 1 "Value" d 40 "xyz.openbmc_project.Configuration.TMP75" 4 "Address" t 79 "Bus" t 40 "Name" s "Host2_Base_2" "Type" s "TMP75"
+root@kestrel:~# busctl call xyz.openbmc_project.EntityManager / org.freedesktop.DBus.ObjectManager  GetManagedObjects --verbose
+MESSAGE "a{oa{sa{sv}}}" {
+        ARRAY "{oa{sa{sv}}}" {
+                DICT_ENTRY "oa{sa{sv}}" {
+                        OBJECT_PATH "/xyz/openbmc_project/inventory/system/board/kestrel/Host1_Base_1";
+                        ARRAY "{sa{sv}}" {
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "org.freedesktop.DBus.Peer";
+                                        ARRAY "{sv}" {
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "org.freedesktop.DBus.Introspectable";
+                                        ARRAY "{sv}" {
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "org.freedesktop.DBus.Properties";
+                                        ARRAY "{sv}" {
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "xyz.openbmc_project.Configuration.TMP75.Thresholds3";
+                                        ARRAY "{sv}" {
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Direction";
+                                                        VARIANT "s" {
+                                                                STRING "less than";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Name";
+                                                        VARIANT "s" {
+                                                                STRING "lower critical";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Severity";
+                                                        VARIANT "d" {
+                                                                DOUBLE 1;
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Value";
+                                                        VARIANT "d" {
+                                                                DOUBLE 0;
+                                                        };
+                                                };
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "xyz.openbmc_project.Configuration.TMP75.Thresholds2";
+                                        ARRAY "{sv}" {
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Direction";
+                                                        VARIANT "s" {
+                                                                STRING "less than";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Name";
+                                                        VARIANT "s" {
+                                                                STRING "lower non critical";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Severity";
+                                                        VARIANT "d" {
+                                                                DOUBLE 0;
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Value";
+                                                        VARIANT "d" {
+                                                                DOUBLE 5;
+                                                        };
+                                                };
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "xyz.openbmc_project.Configuration.TMP75.Thresholds1";
+                                        ARRAY "{sv}" {
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Direction";
+                                                        VARIANT "s" {
+                                                                STRING "greater than";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Name";
+                                                        VARIANT "s" {
+                                                                STRING "upper non critical";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Severity";
+                                                        VARIANT "d" {
+                                                                DOUBLE 0;
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Value";
+                                                        VARIANT "d" {
+                                                                DOUBLE 38;
+                                                        };
+                                                };
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "xyz.openbmc_project.Configuration.TMP75.Thresholds0";
+                                        ARRAY "{sv}" {
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Direction";
+                                                        VARIANT "s" {
+                                                                STRING "greater than";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Name";
+                                                        VARIANT "s" {
+                                                                STRING "upper critical";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Severity";
+                                                        VARIANT "d" {
+                                                                DOUBLE 1;
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Value";
+                                                        VARIANT "d" {
+                                                                DOUBLE 40;
+                                                        };
+                                                };
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "xyz.openbmc_project.Configuration.TMP75";
+                                        ARRAY "{sv}" {
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Address";
+                                                        VARIANT "t" {
+                                                                UINT64 78;
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Bus";
+                                                        VARIANT "t" {
+                                                                UINT64 40;
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Name";
+                                                        VARIANT "s" {
+                                                                STRING "Host1_Base_1";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Type";
+                                                        VARIANT "s" {
+                                                                STRING "TMP75";
+                                                        };
+                                                };
+                                        };
+                                };
+                        };
+                };
+                DICT_ENTRY "oa{sa{sv}}" {
+                        OBJECT_PATH "/xyz/openbmc_project/inventory/system/board/kestrel/Host3_Fcb_1";
+                        ARRAY "{sa{sv}}" {
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "org.freedesktop.DBus.Peer";
+                                        ARRAY "{sv}" {
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "org.freedesktop.DBus.Introspectable";
+                                        ARRAY "{sv}" {
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "org.freedesktop.DBus.Properties";
+                                        ARRAY "{sv}" {
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "xyz.openbmc_project.Configuration.TMP75.Thresholds3";
+                                        ARRAY "{sv}" {
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Direction";
+                                                        VARIANT "s" {
+                                                                STRING "less than";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Name";
+                                                        VARIANT "s" {
+                                                                STRING "lower critical";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Severity";
+                                                        VARIANT "d" {
+                                                                DOUBLE 1;
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Value";
+                                                        VARIANT "d" {
+                                                                DOUBLE 0;
+                                                        };
+                                                };
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "xyz.openbmc_project.Configuration.TMP75.Thresholds2";
+                                        ARRAY "{sv}" {
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Direction";
+                                                        VARIANT "s" {
+                                                                STRING "less than";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Name";
+                                                        VARIANT "s" {
+                                                                STRING "lower non critical";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Severity";
+                                                        VARIANT "d" {
+                                                                DOUBLE 0;
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Value";
+                                                        VARIANT "d" {
+                                                                DOUBLE 5;
+                                                        };
+                                                };
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "xyz.openbmc_project.Configuration.TMP75.Thresholds1";
+                                        ARRAY "{sv}" {
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Direction";
+                                                        VARIANT "s" {
+                                                                STRING "greater than";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Name";
+                                                        VARIANT "s" {
+                                                                STRING "upper non critical";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Severity";
+                                                        VARIANT "d" {
+                                                                DOUBLE 0;
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Value";
+                                                        VARIANT "d" {
+                                                                DOUBLE 38;
+                                                        };
+                                                };
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "xyz.openbmc_project.Configuration.TMP75.Thresholds0";
+                                        ARRAY "{sv}" {
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Direction";
+                                                        VARIANT "s" {
+                                                                STRING "greater than";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Name";
+                                                        VARIANT "s" {
+                                                                STRING "upper critical";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Severity";
+                                                        VARIANT "d" {
+                                                                DOUBLE 1;
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Value";
+                                                        VARIANT "d" {
+                                                                DOUBLE 40;
+                                                        };
+                                                };
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "xyz.openbmc_project.Configuration.TMP75";
+                                        ARRAY "{sv}" {
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Address";
+                                                        VARIANT "t" {
+                                                                UINT64 72;
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Bus";
+                                                        VARIANT "t" {
+                                                                UINT64 39;
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Name";
+                                                        VARIANT "s" {
+                                                                STRING "Host3_Fcb_1";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Type";
+                                                        VARIANT "s" {
+                                                                STRING "TMP75";
+                                                        };
+                                                };
+                                        };
+                                };
+                        };
+                };
+                DICT_ENTRY "oa{sa{sv}}" {
+                        OBJECT_PATH "/xyz/openbmc_project/inventory/system/board/kestrel/Host4_Fcb_2";
+                        ARRAY "{sa{sv}}" {
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "org.freedesktop.DBus.Peer";
+                                        ARRAY "{sv}" {
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "org.freedesktop.DBus.Introspectable";
+                                        ARRAY "{sv}" {
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "org.freedesktop.DBus.Properties";
+                                        ARRAY "{sv}" {
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "xyz.openbmc_project.Configuration.TMP75.Thresholds3";
+                                        ARRAY "{sv}" {
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Direction";
+                                                        VARIANT "s" {
+                                                                STRING "less than";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Name";
+                                                        VARIANT "s" {
+                                                                STRING "lower critical";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Severity";
+                                                        VARIANT "d" {
+                                                                DOUBLE 1;
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Value";
+                                                        VARIANT "d" {
+                                                                DOUBLE 0;
+                                                        };
+                                                };
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "xyz.openbmc_project.Configuration.TMP75.Thresholds2";
+                                        ARRAY "{sv}" {
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Direction";
+                                                        VARIANT "s" {
+                                                                STRING "less than";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Name";
+                                                        VARIANT "s" {
+                                                                STRING "lower non critical";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Severity";
+                                                        VARIANT "d" {
+                                                                DOUBLE 0;
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Value";
+                                                        VARIANT "d" {
+                                                                DOUBLE 5;
+                                                        };
+                                                };
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "xyz.openbmc_project.Configuration.TMP75.Thresholds1";
+                                        ARRAY "{sv}" {
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Direction";
+                                                        VARIANT "s" {
+                                                                STRING "greater than";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Name";
+                                                        VARIANT "s" {
+                                                                STRING "upper non critical";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Severity";
+                                                        VARIANT "d" {
+                                                                DOUBLE 0;
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Value";
+                                                        VARIANT "d" {
+                                                                DOUBLE 38;
+                                                        };
+                                                };
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "xyz.openbmc_project.Configuration.TMP75.Thresholds0";
+                                        ARRAY "{sv}" {
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Direction";
+                                                        VARIANT "s" {
+                                                                STRING "greater than";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Name";
+                                                        VARIANT "s" {
+                                                                STRING "upper critical";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Severity";
+                                                        VARIANT "d" {
+                                                                DOUBLE 1;
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Value";
+                                                        VARIANT "d" {
+                                                                DOUBLE 40;
+                                                        };
+                                                };
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "xyz.openbmc_project.Configuration.TMP75";
+                                        ARRAY "{sv}" {
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Address";
+                                                        VARIANT "t" {
+                                                                UINT64 73;
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Bus";
+                                                        VARIANT "t" {
+                                                                UINT64 39;
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Name";
+                                                        VARIANT "s" {
+                                                                STRING "Host4_Fcb_2";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Type";
+                                                        VARIANT "s" {
+                                                                STRING "TMP75";
+                                                        };
+                                                };
+                                        };
+                                };
+                        };
+                };
+                DICT_ENTRY "oa{sa{sv}}" {
+                        OBJECT_PATH "/xyz/openbmc_project/inventory/system/board/kestrel/Host2_Base_2";
+                        ARRAY "{sa{sv}}" {
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "org.freedesktop.DBus.Peer";
+                                        ARRAY "{sv}" {
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "org.freedesktop.DBus.Introspectable";
+                                        ARRAY "{sv}" {
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "org.freedesktop.DBus.Properties";
+                                        ARRAY "{sv}" {
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "xyz.openbmc_project.Configuration.TMP75.Thresholds3";
+                                        ARRAY "{sv}" {
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Direction";
+                                                        VARIANT "s" {
+                                                                STRING "less than";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Name";
+                                                        VARIANT "s" {
+                                                                STRING "lower critical";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Severity";
+                                                        VARIANT "d" {
+                                                                DOUBLE 1;
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Value";
+                                                        VARIANT "d" {
+                                                                DOUBLE 0;
+                                                        };
+                                                };
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "xyz.openbmc_project.Configuration.TMP75.Thresholds2";
+                                        ARRAY "{sv}" {
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Direction";
+                                                        VARIANT "s" {
+                                                                STRING "less than";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Name";
+                                                        VARIANT "s" {
+                                                                STRING "lower non critical";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Severity";
+                                                        VARIANT "d" {
+                                                                DOUBLE 0;
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Value";
+                                                        VARIANT "d" {
+                                                                DOUBLE 5;
+                                                        };
+                                                };
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "xyz.openbmc_project.Configuration.TMP75.Thresholds1";
+                                        ARRAY "{sv}" {
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Direction";
+                                                        VARIANT "s" {
+                                                                STRING "greater than";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Name";
+                                                        VARIANT "s" {
+                                                                STRING "upper non critical";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Severity";
+                                                        VARIANT "d" {
+                                                                DOUBLE 0;
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Value";
+                                                        VARIANT "d" {
+                                                                DOUBLE 38;
+                                                        };
+                                                };
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "xyz.openbmc_project.Configuration.TMP75.Thresholds0";
+                                        ARRAY "{sv}" {
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Direction";
+                                                        VARIANT "s" {
+                                                                STRING "greater than";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Name";
+                                                        VARIANT "s" {
+                                                                STRING "upper critical";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Severity";
+                                                        VARIANT "d" {
+                                                                DOUBLE 1;
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Value";
+                                                        VARIANT "d" {
+                                                                DOUBLE 40;
+                                                        };
+                                                };
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "xyz.openbmc_project.Configuration.TMP75";
+                                        ARRAY "{sv}" {
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Address";
+                                                        VARIANT "t" {
+                                                                UINT64 79;
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Bus";
+                                                        VARIANT "t" {
+                                                                UINT64 40;
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Name";
+                                                        VARIANT "s" {
+                                                                STRING "Host2_Base_2";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Type";
+                                                        VARIANT "s" {
+                                                                STRING "TMP75";
+                                                        };
+                                                };
+                                        };
+                                };
+                        };
+                };
+                DICT_ENTRY "oa{sa{sv}}" {
+                        OBJECT_PATH "/xyz/openbmc_project/inventory/system/board/kestrel";
+                        ARRAY "{sa{sv}}" {
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "org.freedesktop.DBus.Peer";
+                                        ARRAY "{sv}" {
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "org.freedesktop.DBus.Introspectable";
+                                        ARRAY "{sv}" {
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "org.freedesktop.DBus.Properties";
+                                        ARRAY "{sv}" {
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "xyz.openbmc_project.Inventory.Item.Board";
+                                        ARRAY "{sv}" {
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Name";
+                                                        VARIANT "s" {
+                                                                STRING "kestrel";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Probe";
+                                                        VARIANT "s" {
+                                                                STRING "TRUE";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Type";
+                                                        VARIANT "s" {
+                                                                STRING "Board";
+                                                        };
+                                                };
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "xyz.openbmc_project.AddObject";
+                                        ARRAY "{sv}" {
+                                        };
+                                };
+                        };
+                };
+                DICT_ENTRY "oa{sa{sv}}" {
+                        OBJECT_PATH "/xyz/openbmc_project/inventory/system/board/kestrel/BMC_LM75_1";
+                        ARRAY "{sa{sv}}" {
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "org.freedesktop.DBus.Peer";
+                                        ARRAY "{sv}" {
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "org.freedesktop.DBus.Introspectable";
+                                        ARRAY "{sv}" {
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "org.freedesktop.DBus.Properties";
+                                        ARRAY "{sv}" {
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "xyz.openbmc_project.Configuration.TMP75.Thresholds3";
+                                        ARRAY "{sv}" {
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Direction";
+                                                        VARIANT "s" {
+                                                                STRING "less than";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Name";
+                                                        VARIANT "s" {
+                                                                STRING "lower critical";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Severity";
+                                                        VARIANT "d" {
+                                                                DOUBLE 1;
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Value";
+                                                        VARIANT "d" {
+                                                                DOUBLE 0;
+                                                        };
+                                                };
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "xyz.openbmc_project.Configuration.TMP75.Thresholds2";
+                                        ARRAY "{sv}" {
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Direction";
+                                                        VARIANT "s" {
+                                                                STRING "less than";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Name";
+                                                        VARIANT "s" {
+                                                                STRING "lower non critical";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Severity";
+                                                        VARIANT "d" {
+                                                                DOUBLE 0;
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Value";
+                                                        VARIANT "d" {
+                                                                DOUBLE 5;
+                                                        };
+                                                };
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "xyz.openbmc_project.Configuration.TMP75.Thresholds1";
+                                        ARRAY "{sv}" {
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Direction";
+                                                        VARIANT "s" {
+                                                                STRING "greater than";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Name";
+                                                        VARIANT "s" {
+                                                                STRING "upper non critical";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Severity";
+                                                        VARIANT "d" {
+                                                                DOUBLE 0;
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Value";
+                                                        VARIANT "d" {
+                                                                DOUBLE 38;
+                                                        };
+                                                };
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "xyz.openbmc_project.Configuration.TMP75.Thresholds0";
+                                        ARRAY "{sv}" {
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Direction";
+                                                        VARIANT "s" {
+                                                                STRING "greater than";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Name";
+                                                        VARIANT "s" {
+                                                                STRING "upper critical";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Severity";
+                                                        VARIANT "d" {
+                                                                DOUBLE 1;
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Value";
+                                                        VARIANT "d" {
+                                                                DOUBLE 40;
+                                                        };
+                                                };
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "xyz.openbmc_project.Configuration.TMP75";
+                                        ARRAY "{sv}" {
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Address";
+                                                        VARIANT "t" {
+                                                                UINT64 74;
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Bus";
+                                                        VARIANT "t" {
+                                                                UINT64 8;
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Name";
+                                                        VARIANT "s" {
+                                                                STRING "BMC_LM75_1";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Type";
+                                                        VARIANT "s" {
+                                                                STRING "TMP75";
+                                                        };
+                                                };
+                                        };
+                                };
+                        };
+                };
+                DICT_ENTRY "oa{sa{sv}}" {
+                        OBJECT_PATH "/xyz/openbmc_project/inventory/system/board/kestrel/BMC_eeprom0";
+                        ARRAY "{sa{sv}}" {
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "org.freedesktop.DBus.Peer";
+                                        ARRAY "{sv}" {
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "org.freedesktop.DBus.Introspectable";
+                                        ARRAY "{sv}" {
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "org.freedesktop.DBus.Properties";
+                                        ARRAY "{sv}" {
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "xyz.openbmc_project.Configuration.EEPROM_24C64";
+                                        ARRAY "{sv}" {
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Address";
+                                                        VARIANT "t" {
+                                                                UINT64 80;
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Bus";
+                                                        VARIANT "t" {
+                                                                UINT64 8;
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Name";
+                                                        VARIANT "s" {
+                                                                STRING "BMC_eeprom0";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Type";
+                                                        VARIANT "s" {
+                                                                STRING "EEPROM_24C64";
+                                                        };
+                                                };
+                                        };
+                                };
+                        };
+                };
+                DICT_ENTRY "oa{sa{sv}}" {
+                        OBJECT_PATH "/xyz/openbmc_project/EntityManager";
+                        ARRAY "{sa{sv}}" {
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "org.freedesktop.DBus.Peer";
+                                        ARRAY "{sv}" {
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "org.freedesktop.DBus.Introspectable";
+                                        ARRAY "{sv}" {
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "org.freedesktop.DBus.Properties";
+                                        ARRAY "{sv}" {
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "xyz.openbmc_project.EntityManager";
+                                        ARRAY "{sv}" {
+                                        };
+                                };
+                        };
+                };
+        };
+};
+
+
+
+
+
+
+root@kestrel:~# busctl call xyz.openbmc_project.FruDevice / org.freedesktop.DBus.ObjectManager  GetManagedObjects                               
+a{oa{sa{sv}}} 6 "/xyz/openbmc_project/FruDevice" 4 "org.freedesktop.DBus.Peer" 0 "org.freedesktop.DBus.Introspectable" 0 "org.freedesktop.DBus.Properties" 0 "xyz.openbmc_project.FruDeviceManager" 0 "/xyz/openbmc_project/FruDevice/ID0" 4 "org.freedesktop.DBus.Peer" 0 "org.freedesktop.DBus.Introspectable" 0 "org.freedesktop.DBus.Properties" 0 "xyz.openbmc_project.FruDevice" 19 "BOARD_LANGUAGE_CODE" s "0" "BOARD_MANUFACTURER" s "HUAQIN" "BOARD_MANUFACTURE_DATE" s "2021-03-25 - 15:46:00" "BOARD_PART_NUMBER" s "SH1UDRA290004" "BOARD_PRODUCT_NAME" s "ID0" "BOARD_SERIAL_NUMBER" s "7NDRA290004" "CHASSIS_PART_NUMBER" s "SH1UDRA290003" "CHASSIS_SERIAL_NUMBER" s "7NDRA290003" "CHASSIS_TYPE" s "23" "Common_Format_Version" s "1" "PRODUCT_ASSET_TAG" s "tesny" "PRODUCT_LANGUAGE_CODE" s "0" "PRODUCT_MANUFACTURER" s "HUAQIN" "PRODUCT_PART_NUMBER" s "SH1UDRA290005" "PRODUCT_PRODUCT_NAME" s "ID0" "PRODUCT_SERIAL_NUMBER" s "7NDRA290005" "PRODUCT_VERSION" s "v1.66" "BUS" u 8 "ADDRESS" u 82 "/xyz/openbmc_project/FruDevice/8_81" 4 "org.freedesktop.DBus.Peer" 0 "org.freedesktop.DBus.Introspectable" 0 "org.freedesktop.DBus.Properties" 0 "xyz.openbmc_project.Inventory.Item.I2CDevice" 2 "Bus" u 8 "Address" u 81 "/xyz/openbmc_project/FruDevice/8_82" 4 "org.freedesktop.DBus.Peer" 0 "org.freedesktop.DBus.Introspectable" 0 "org.freedesktop.DBus.Properties" 0 "xyz.openbmc_project.Inventory.Item.I2CDevice" 2 "Bus" u 8 "Address" u 82 "/xyz/openbmc_project/FruDevice/test0" 4 "org.freedesktop.DBus.Peer" 0 "org.freedesktop.DBus.Introspectable" 0 "org.freedesktop.DBus.Properties" 0 "xyz.openbmc_project.FruDevice" 19 "BOARD_LANGUAGE_CODE" s "0" "BOARD_MANUFACTURER" s "HUAQIN" "BOARD_MANUFACTURE_DATE" s "2021-09-28 - 14:05:00" "BOARD_PART_NUMBER" s "SH1UDRA290004" "BOARD_PRODUCT_NAME" s "test0" "BOARD_SERIAL_NUMBER" s "7NDRA290004" "CHASSIS_PART_NUMBER" s "SH1UDRA290003" "CHASSIS_SERIAL_NUMBER" s "7NDRA290003" "CHASSIS_TYPE" s "23" "Common_Format_Version" s "1" "PRODUCT_ASSET_TAG" s "test" "PRODUCT_LANGUAGE_CODE" s "0" "PRODUCT_MANUFACTURER" s "HUAQIN" "PRODUCT_PART_NUMBER" s "SH1UDRA290005" "PRODUCT_PRODUCT_NAME" s "test0" "PRODUCT_SERIAL_NUMBER" s "7NDRA290005" "PRODUCT_VERSION" s "v1.66" "BUS" u 8 "ADDRESS" u 81 "/xyz/openbmc_project/FruDevice/Some_Cool_MATAO_3Product" 4 "org.freedesktop.DBus.Peer" 0 "org.freedesktop.DBus.Introspectable" 0 "org.freedesktop.DBus.Properties" 0 "xyz.openbmc_project.FruDevice" 11 "BOARD_FRU_VERSION_ID" s "Command Line" "BOARD_INFO_AM1" s "01020304fead1e" "BOARD_LANGUAGE_CODE" s "25" "BOARD_MANUFACTURER" s "Biggest International Corp." "BOARD_MANUFACTURE_DATE" s "2017-01-10 - 04:58:00" "BOARD_PART_NUMBER" s "BRD-PN-123" "BOARD_PRODUCT_NAME" s "Some Cool MATAO-3Product" "BOARD_SERIAL_NUMBER" s "01171234" "Common_Format_Version" s "1" "BUS" u 8 "ADDRESS" u 80
+
+
+
+root@kestrel:~# busctl call xyz.openbmc_project.FruDevice / org.freedesktop.DBus.ObjectManager  GetManagedObjects --verbose
+MESSAGE "a{oa{sa{sv}}}" {
+        ARRAY "{oa{sa{sv}}}" {
+                DICT_ENTRY "oa{sa{sv}}" {
+                        OBJECT_PATH "/xyz/openbmc_project/FruDevice";
+                        ARRAY "{sa{sv}}" {
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "org.freedesktop.DBus.Peer";
+                                        ARRAY "{sv}" {
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "org.freedesktop.DBus.Introspectable";
+                                        ARRAY "{sv}" {
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "org.freedesktop.DBus.Properties";
+                                        ARRAY "{sv}" {
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "xyz.openbmc_project.FruDeviceManager";
+                                        ARRAY "{sv}" {
+                                        };
+                                };
+                        };
+                };
+                DICT_ENTRY "oa{sa{sv}}" {
+                        OBJECT_PATH "/xyz/openbmc_project/FruDevice/ID0";
+                        ARRAY "{sa{sv}}" {
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "org.freedesktop.DBus.Peer";
+                                        ARRAY "{sv}" {
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "org.freedesktop.DBus.Introspectable";
+                                        ARRAY "{sv}" {
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "org.freedesktop.DBus.Properties";
+                                        ARRAY "{sv}" {
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "xyz.openbmc_project.FruDevice";
+                                        ARRAY "{sv}" {
+                                                DICT_ENTRY "sv" {
+                                                        STRING "BOARD_LANGUAGE_CODE";
+                                                        VARIANT "s" {
+                                                                STRING "0";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "BOARD_MANUFACTURER";
+                                                        VARIANT "s" {
+                                                                STRING "HUAQIN";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "BOARD_MANUFACTURE_DATE";
+                                                        VARIANT "s" {
+                                                                STRING "2021-03-25 - 15:46:00";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "BOARD_PART_NUMBER";
+                                                        VARIANT "s" {
+                                                                STRING "SH1UDRA290004";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "BOARD_PRODUCT_NAME";
+                                                        VARIANT "s" {
+                                                                STRING "ID0";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "BOARD_SERIAL_NUMBER";
+                                                        VARIANT "s" {
+                                                                STRING "7NDRA290004";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "CHASSIS_PART_NUMBER";
+                                                        VARIANT "s" {
+                                                                STRING "SH1UDRA290003";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "CHASSIS_SERIAL_NUMBER";
+                                                        VARIANT "s" {
+                                                                STRING "7NDRA290003";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "CHASSIS_TYPE";
+                                                        VARIANT "s" {
+                                                                STRING "23";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Common_Format_Version";
+                                                        VARIANT "s" {
+                                                                STRING "1";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "PRODUCT_ASSET_TAG";
+                                                        VARIANT "s" {
+                                                                STRING "tesny";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "PRODUCT_LANGUAGE_CODE";
+                                                        VARIANT "s" {
+                                                                STRING "0";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "PRODUCT_MANUFACTURER";
+                                                        VARIANT "s" {
+                                                                STRING "HUAQIN";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "PRODUCT_PART_NUMBER";
+                                                        VARIANT "s" {
+                                                                STRING "SH1UDRA290005";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "PRODUCT_PRODUCT_NAME";
+                                                        VARIANT "s" {
+                                                                STRING "ID0";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "PRODUCT_SERIAL_NUMBER";
+                                                        VARIANT "s" {
+                                                                STRING "7NDRA290005";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "PRODUCT_VERSION";
+                                                        VARIANT "s" {
+                                                                STRING "v1.66";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "BUS";
+                                                        VARIANT "u" {
+                                                                UINT32 8;
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "ADDRESS";
+                                                        VARIANT "u" {
+                                                                UINT32 82;
+                                                        };
+                                                };
+                                        };
+                                };
+                        };
+                };
+                DICT_ENTRY "oa{sa{sv}}" {
+                        OBJECT_PATH "/xyz/openbmc_project/FruDevice/8_81";
+                        ARRAY "{sa{sv}}" {
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "org.freedesktop.DBus.Peer";
+                                        ARRAY "{sv}" {
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "org.freedesktop.DBus.Introspectable";
+                                        ARRAY "{sv}" {
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "org.freedesktop.DBus.Properties";
+                                        ARRAY "{sv}" {
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "xyz.openbmc_project.Inventory.Item.I2CDevice";
+                                        ARRAY "{sv}" {
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Bus";
+                                                        VARIANT "u" {
+                                                                UINT32 8;
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Address";
+                                                        VARIANT "u" {
+                                                                UINT32 81;
+                                                        };
+                                                };
+                                        };
+                                };
+                        };
+                };
+                DICT_ENTRY "oa{sa{sv}}" {
+                        OBJECT_PATH "/xyz/openbmc_project/FruDevice/8_82";
+                        ARRAY "{sa{sv}}" {
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "org.freedesktop.DBus.Peer";
+                                        ARRAY "{sv}" {
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "org.freedesktop.DBus.Introspectable";
+                                        ARRAY "{sv}" {
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "org.freedesktop.DBus.Properties";
+                                        ARRAY "{sv}" {
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "xyz.openbmc_project.Inventory.Item.I2CDevice";
+                                        ARRAY "{sv}" {
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Bus";
+                                                        VARIANT "u" {
+                                                                UINT32 8;
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Address";
+                                                        VARIANT "u" {
+                                                                UINT32 82;
+                                                        };
+                                                };
+                                        };
+                                };
+                        };
+                };
+                DICT_ENTRY "oa{sa{sv}}" {
+                        OBJECT_PATH "/xyz/openbmc_project/FruDevice/test0";
+                        ARRAY "{sa{sv}}" {
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "org.freedesktop.DBus.Peer";
+                                        ARRAY "{sv}" {
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "org.freedesktop.DBus.Introspectable";
+                                        ARRAY "{sv}" {
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "org.freedesktop.DBus.Properties";
+                                        ARRAY "{sv}" {
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "xyz.openbmc_project.FruDevice";
+                                        ARRAY "{sv}" {
+                                                DICT_ENTRY "sv" {
+                                                        STRING "BOARD_LANGUAGE_CODE";
+                                                        VARIANT "s" {
+                                                                STRING "0";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "BOARD_MANUFACTURER";
+                                                        VARIANT "s" {
+                                                                STRING "HUAQIN";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "BOARD_MANUFACTURE_DATE";
+                                                        VARIANT "s" {
+                                                                STRING "2021-09-28 - 14:05:00";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "BOARD_PART_NUMBER";
+                                                        VARIANT "s" {
+                                                                STRING "SH1UDRA290004";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "BOARD_PRODUCT_NAME";
+                                                        VARIANT "s" {
+                                                                STRING "test0";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "BOARD_SERIAL_NUMBER";
+                                                        VARIANT "s" {
+                                                                STRING "7NDRA290004";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "CHASSIS_PART_NUMBER";
+                                                        VARIANT "s" {
+                                                                STRING "SH1UDRA290003";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "CHASSIS_SERIAL_NUMBER";
+                                                        VARIANT "s" {
+                                                                STRING "7NDRA290003";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "CHASSIS_TYPE";
+                                                        VARIANT "s" {
+                                                                STRING "23";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Common_Format_Version";
+                                                        VARIANT "s" {
+                                                                STRING "1";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "PRODUCT_ASSET_TAG";
+                                                        VARIANT "s" {
+                                                                STRING "test";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "PRODUCT_LANGUAGE_CODE";
+                                                        VARIANT "s" {
+                                                                STRING "0";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "PRODUCT_MANUFACTURER";
+                                                        VARIANT "s" {
+                                                                STRING "HUAQIN";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "PRODUCT_PART_NUMBER";
+                                                        VARIANT "s" {
+                                                                STRING "SH1UDRA290005";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "PRODUCT_PRODUCT_NAME";
+                                                        VARIANT "s" {
+                                                                STRING "test0";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "PRODUCT_SERIAL_NUMBER";
+                                                        VARIANT "s" {
+                                                                STRING "7NDRA290005";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "PRODUCT_VERSION";
+                                                        VARIANT "s" {
+                                                                STRING "v1.66";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "BUS";
+                                                        VARIANT "u" {
+                                                                UINT32 8;
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "ADDRESS";
+                                                        VARIANT "u" {
+                                                                UINT32 81;
+                                                        };
+                                                };
+                                        };
+                                };
+                        };
+                };
+                DICT_ENTRY "oa{sa{sv}}" {
+                        OBJECT_PATH "/xyz/openbmc_project/FruDevice/Some_Cool_MATAO_3Product";
+                        ARRAY "{sa{sv}}" {
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "org.freedesktop.DBus.Peer";
+                                        ARRAY "{sv}" {
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "org.freedesktop.DBus.Introspectable";
+                                        ARRAY "{sv}" {
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "org.freedesktop.DBus.Properties";
+                                        ARRAY "{sv}" {
+                                        };
+                                };
+                                DICT_ENTRY "sa{sv}" {
+                                        STRING "xyz.openbmc_project.FruDevice";
+                                        ARRAY "{sv}" {
+                                                DICT_ENTRY "sv" {
+                                                        STRING "BOARD_FRU_VERSION_ID";
+                                                        VARIANT "s" {
+                                                                STRING "Command Line";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "BOARD_INFO_AM1";
+                                                        VARIANT "s" {
+                                                                STRING "01020304fead1e";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "BOARD_LANGUAGE_CODE";
+                                                        VARIANT "s" {
+                                                                STRING "25";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "BOARD_MANUFACTURER";
+                                                        VARIANT "s" {
+                                                                STRING "Biggest International Corp.";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "BOARD_MANUFACTURE_DATE";
+                                                        VARIANT "s" {
+                                                                STRING "2017-01-10 - 04:58:00";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "BOARD_PART_NUMBER";
+                                                        VARIANT "s" {
+                                                                STRING "BRD-PN-123";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "BOARD_PRODUCT_NAME";
+                                                        VARIANT "s" {
+                                                                STRING "Some Cool MATAO-3Product";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "BOARD_SERIAL_NUMBER";
+                                                        VARIANT "s" {
+                                                                STRING "01171234";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "Common_Format_Version";
+                                                        VARIANT "s" {
+                                                                STRING "1";
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "BUS";
+                                                        VARIANT "u" {
+                                                                UINT32 8;
+                                                        };
+                                                };
+                                                DICT_ENTRY "sv" {
+                                                        STRING "ADDRESS";
+                                                        VARIANT "u" {
+                                                                UINT32 80;
+                                                        };
+                                                };
+                                        };
+                                };
+                        };
+                };
+        };
+};
