@@ -68,7 +68,7 @@ int main(int argc, char **argv)
 
 
 	printf("===================fcntl test F_DUPFD ====================== \n");
-	ret = fcntl(fd, F_DUPFD, 0);//Duplicate file descriptor   fd ~=ret
+	ret = fcntl(fd, F_DUPFD, 0);//Duplicate file descriptor   fd ~=ret  //读会追加读  cfo(current file offset)会变化
 	printf("ret= 0x%x fd=0x%x\n",ret,fd);
 
 	len = read(ret,buf,2);

@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "api.h"
+// #include "api.h"
 #include <dlfcn.h>
 
  
@@ -18,11 +18,12 @@
 // //编译可执行文件：gcc main.c  -o test -L ./ -lapi   （编译时候需要使用到库指定库在当前目录下，和运行的时候是不一样的）
 // int main()
 // {
-//     test();
+//     test(0);
 //     return 0;
 // }
 
 
+<<<<<<< HEAD
 
 void matao(){
     printf("this is matao\n");
@@ -36,16 +37,43 @@ int main()
     /*手动加载指定位置的so动态库*/
     void* handle = dlopen("./libapi.so", RTLD_LAZY);
     int (*test)();
+=======
+// //调用动态库
+// //编译指令：gcc main.c  -o test-1  -ldl 
+// int main()
+// {
+//     /*手动加载指定位置的so动态库*/
+//     void* handle = dlopen("./libapi.so", RTLD_LAZY);
+//     int (*test)();
+>>>>>>> 2451533ab5a0d6c09bac9ad3280975645bddb541
 
-    /*根据动态链接库操作句柄与符号，返回符号对应的地址*/
-    test = dlsym(handle, "test");
+//     /*根据动态链接库操作句柄与符号，返回符号对应的地址*/
+//     *(void**)(&test) = dlsym(handle, "test");
 
-    test();
-    printf("main --over\n");
+//     test();
+//     printf("main --over\n");
 
-    dlclose(handle);
-    return 0;
-}
+//     dlclose(handle);
+//     return 0;
+// }
 
 
 
+// int main()
+// {
+//     void *handle = dlopen("./libapi.so", RTLD_LAZY);
+//     int (*test)(int vol);
+//     int (*test_1)(int vol);
+//     *(void**)(&test)  = dlsym(handle, "test");
+//     *(void**)(&test_1) = dlsym(handle, "test_1");
+//     while(1){
+//         test(1);
+//         test_1(1);
+//         sleep(3);
+//     }
+    
+//     printf("matao ---test");
+//     dlclose(handle);
+//     return 0;
+
+// }

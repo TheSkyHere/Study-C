@@ -47,7 +47,7 @@ int * fun2(int*p,int x)
 void main()
 {
     Stu1 stu;
-    Stu struct_1;
+    Stu struct_1 = {3, 4, fun1, fun2};  //等同于 type 1
     stu=&struct_1;    //注意关于结构体指针的赋值！！！！！  pointer need entity
 
 
@@ -56,7 +56,7 @@ void main()
     printf("starting_begin\r\n");
 
 
-
+    //type 1
     stu->num=3;
     stu->type=4;
     stu->fu1 =fun1;     //注意函数指针的赋值
