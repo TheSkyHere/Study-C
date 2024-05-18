@@ -8,11 +8,14 @@
 
 int main(int arg, char **args)
 {
-    char *argv[]={"ls","-al","/home/morton/", NULL};
+//    char *argv[]={"ls","-al","/home/morton/", NULL};
+    char *argv[]={"ls -al", NULL};
 
     char *envp[]={0,NULL}; //传递给执行文件新的环境变量数组
 
-    execve("/bin/ls",argv,envp);
+  //  execve("/bin/ls","ls -al",envp);
+
+    system("ls -al");
 
 }
 

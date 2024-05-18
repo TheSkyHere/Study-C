@@ -1,0 +1,2 @@
+把fpga image rpd格式的image转换成bin格式（大小端转换）。
+../test ./hpa_fapg_top_v0_02_01_Single_High_Power.rpd ./hpa_fapg_top_v0_02_01_Single_High_Power.rpd.bin
